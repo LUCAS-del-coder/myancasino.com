@@ -78,6 +78,34 @@
   }
   </script>
 
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://myancasino.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Articles",
+        "item": "https://myancasino.com/best-online-casino-sites-myanmar.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "PV991 Online Casino",
+        "item": "https://myancasino.com/pv991-online-casino-myanmar.html"
+      }
+    ]
+  }
+  </script>
+
   <link rel="preload" href="article.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="article.css"></noscript>
   
@@ -194,6 +222,26 @@
         color: #fbbf24;
       }
     }
+    
+    /* Breadcrumb Navigation */
+    .breadcrumb {
+      padding: 1rem 0;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+    .breadcrumb a {
+      color: #e76e01;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .breadcrumb a:hover {
+      color: #ff8c42;
+      text-decoration: underline;
+    }
+    .breadcrumb span {
+      margin: 0 0.5rem;
+      color: #9ca3af;
+    }
   </style>
 </head>
 
@@ -237,6 +285,34 @@
   <main>
     <article class="pt-24 sm:pt-28 pb-16 fade-in-section">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Breadcrumb Navigation -->
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="flex items-center space-x-2" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a href="/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+              <meta itemprop="position" content="1" />
+            </li>
+            <li>
+              <span>›</span>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+              <a href="/best-online-casino-sites-myanmar.html" itemprop="item">
+                <span itemprop="name">Articles</span>
+              </a>
+              <meta itemprop="position" content="2" />
+            </li>
+            <li>
+              <span>›</span>
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+              <span itemprop="name" class="text-gray-600">PV991 Online Casino</span>
+              <meta itemprop="position" content="3" />
+            </li>
+          </ol>
+        </nav>
         
         <!-- Header Section -->
         <header class="mb-12 sm:mb-16 text-center">
